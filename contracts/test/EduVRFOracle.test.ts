@@ -45,7 +45,7 @@ describe("EduChainLinkOracle Tests", () => {
         let linkTokenAddress = linkToken.address;
         let vrfCoordinatorAddress = vrfCoordinatorMock.address;
 
-        EduChainLinkOracle = await ethers.getContractFactory("EduChainLinkOracle");
+        EduChainLinkOracle = await ethers.getContractFactory("EduVRFOracle");
         eduChainLinkOracle = await EduChainLinkOracle.deploy(vrfCoordinatorAddress,
             linkTokenAddress,
             keyHash,

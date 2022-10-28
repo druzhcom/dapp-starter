@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 
-contract EduChainLinkOracle is VRFConsumerBase {
+contract EduVRFOracle is VRFConsumerBase {
     using Counters for Counters.Counter;
     using SafeMath for uint256;
 

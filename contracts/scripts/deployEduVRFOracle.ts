@@ -21,7 +21,7 @@ async function main() {
     const keyHash = config[31337].keyHash;
     const fee = config[31337].fee;
 
-    const EduChainLinkOracle = await ethers.getContractFactory("EduChainLinkOracle");
+    const EduChainLinkOracle = await ethers.getContractFactory("EduVRFOracle");
     const eduCHOracle = await EduChainLinkOracle.deploy(vrfCoordinatorAddress,
         linkTokenAddress,
         keyHash,

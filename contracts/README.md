@@ -6,18 +6,26 @@
 - fund-link
 - @chainlink/contracts
 - @openzeppelin/contracts
+- witnet-solidity-bridge
 
 ## Scripts
 
 
 Проверка контрактов 
 ```
-npx hardhat test ./test/EduChainLinkOracle.test.ts --network hardhat
+npx hardhat test ./test/EduVRFOracle.test.ts --network hardhat
+npx hardhat test ./test/EduAPIDataOracle.test --network hardhat
+
 ```
 
-Deploy `EduChainLinkOracle` to Hardhat Network
+Deploy `deployEduVRFOracle` to Hardhat Network
 ```
-npx hardhat run scripts/deployEduChainLinkOracle.ts --network hardhat
+npx hardhat run scripts/deployEduVRFOracle.ts --network hardhat
+```
+
+Deploy `deployEduAPIDataOracle` to Hardhat Network
+```
+npx hardhat run scripts/deployEduAPIDataOracle.ts --network hardhat
 ```
 
 ```shell
