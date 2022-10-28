@@ -21,15 +21,15 @@ async function main() {
     const keyHash = config[31337].keyHash;
     const fee = config[31337].fee;
 
-    const EduOracle = await ethers.getContractFactory("EduOracle");
-    const eduOracle = await EduOracle.deploy(vrfCoordinatorAddress,
+    const EduChainLinkOracle = await ethers.getContractFactory("EduChainLinkOracle");
+    const eduCHOracle = await EduChainLinkOracle.deploy(vrfCoordinatorAddress,
         linkTokenAddress,
         keyHash,
         ethers.utils.parseUnits(fee, 18));
 
-    await eduOracle.deployed();
+    await eduCHOracle.deployed();
 
-    console.log(`Token deployed to ${eduOracle.address}`);
+    console.log(`Token deployed to ${eduCHOracle.address}`);
 
 }
 

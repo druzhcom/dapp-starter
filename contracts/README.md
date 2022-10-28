@@ -9,10 +9,15 @@
 
 ## Scripts
 
-Deploy `EduOracle` to Hardhat Network
 
+Проверка контрактов 
 ```
-npx hardhat run scripts/deployEduOracle.ts --network hardhat
+npx hardhat test ./test/EduChainLinkOracle.test.ts --network hardhat
+```
+
+Deploy `EduChainLinkOracle` to Hardhat Network
+```
+npx hardhat run scripts/deployEduChainLinkOracle.ts --network hardhat
 ```
 
 ```shell
